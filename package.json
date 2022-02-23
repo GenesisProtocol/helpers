@@ -1,0 +1,16 @@
+{
+  "name": "@genesisprotocol/helpers",
+  "version": "0.0.1",
+  "description": "Helpers for genesis",
+  "main": "index.js",
+  "repository": {
+	"type": "git",
+	"url": "git+https://github.com/GenesisProtocol/helpers.git"
+  },
+  "author": "AdamGenesis",
+  "license": "ISC",
+  "bugs": {
+	"url": "https://github.com/GenesisProtocol/helpers/issues"
+  },
+  "homepage": "https://github.com/GenesisProtocol/helpers#readme"
+}
