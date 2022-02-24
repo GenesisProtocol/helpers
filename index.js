@@ -1,6 +1,8 @@
 const fs = require('fs').promises
+const path = require('path')
+const Case = require('case')
 
-const ADDRESSES_FILE_PATH = './addresses.json'
+const ADDRESSES_FILE_PATH = path.join(__dirname, 'addresses.json')
 
 const getAddresses = async () => JSON.parse((await fs.readFile(ADDRESSES_FILE_PATH)).toString())
 
@@ -17,7 +19,7 @@ const saveAddress = async ({ chain, name, address }) => {
 	if (!addresses[chain])
 		addresses[chain] = {}
 
-	addresses[chain][name] = address.toLowerCase()
+	addresses[chain][Case.constant(name)] = address.toLowerCase()
 
 	await saveAddresses(addresses)
 }
