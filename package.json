@@ -13,7 +13,7 @@
   "url": "https://github.com/GenesisProtocol/helpers/issues"
  },
  "homepage": "https://github.com/GenesisProtocol/helpers#readme",
- "dependencies": {
+ "devDependencies": {
   "case": "^1.6.3",
   "eslint": "^8.5.0"
  }
