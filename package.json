@@ -15,6 +15,7 @@
  "homepage": "https://github.com/GenesisProtocol/helpers#readme",
  "devDependencies": {
   "case": "^1.6.3",
-  "eslint": "^8.5.0"
+  "eslint": "^8.5.0",
+  "ethers": "^5.5.4"
  }
 }

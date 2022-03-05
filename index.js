@@ -1,4 +1,26 @@
+const ethers = require('./src/ethers')
+const addresses = require('./src/addresses')
+const abis = require('./src/abis')
+
+const save = async ({ name, address, abi }) => {
+	const chain = await ethers.getChain()
+
+	await Promise.all([
+		addresses.saveAddress({
+			chain,
+			name,
+			address,
+		}),
+		abis.saveABI({
+			name,
+			abi ,
+		}),
+	])
+}
+
 module.exports = {
-	...require('./src/addresses'),
-	...require('./src/ethers'),
+	save,
+	...addresses,
+	...ethers,
+	...abis,
 }
