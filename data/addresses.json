@@ -1,4 +1,8 @@
 {
+	"0": {
+		"ZERO": "0x0000000000000000000000000000000000000000",
+		"NATIVE": "0xffffffffffffffffffffffffffffffffffffffff"
+	},
     "80001": {
         "MOCK_DAI": "0x0b16f8b5fdeb0f6e96030b7e8fd60fa00510df83",
         "MOCK_USDC": "0x351fdfcff4d60ea2452331d0c18bef31632070b3",
