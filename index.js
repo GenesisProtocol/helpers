@@ -11,7 +11,7 @@ const saveAddresses = async addresses => fs.writeFile(
 	JSON.stringify(addresses, null, 4),
 )
 
-const getAddress = async ({ chain, name }) => (await getAddresses())?.[chain]?.[name]
+const getAddress = async ({ chain, name }) => (await getAddresses())?.[chain]?.[Case.constant(name)]
 
 const saveAddress = async ({ chain, name, address }) => {
 	const addresses = await getAddresses()
