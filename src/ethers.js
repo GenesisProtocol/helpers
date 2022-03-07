@@ -11,13 +11,16 @@ const getContract = async ({ name }) => new ethers.Contract(
 		name,
 	}),
 	await getABI({ name }),
-	(await ethers.getSigners())[0]
+	(await ethers.getSigners())[0],
 )
 
 const send = async (tx, wait = 2) => {
 	tx = await tx
 
-	await tx.wait(wait)
+	const network = process?.env?.HARDHAT_NETWORK
+
+	if (network !== 'hardhat' && network !== 'localhost')
+		await tx.wait(wait)
 
 	return tx
 }
