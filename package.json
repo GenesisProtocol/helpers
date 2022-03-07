@@ -1,6 +1,6 @@
 {
  "name": "@genesisprotocol/helpers",
- "version": "0.0.4",
+ "version": "0.0.8",
  "description": "Helpers for genesis",
  "main": "index.js",
  "repository": {
@@ -13,8 +13,10 @@
   "url": "https://github.com/GenesisProtocol/helpers/issues"
  },
  "homepage": "https://github.com/GenesisProtocol/helpers#readme",
+ "dependencies": {
+  "case": "^1.6.3"
+ },
  "devDependencies": {
-  "case": "^1.6.3",
   "eslint": "^8.5.0",
   "ethers": "^5.5.4"
  }
