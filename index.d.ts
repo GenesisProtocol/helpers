@@ -1,0 +1,1 @@
+export function getAddress({chain, name}: {chain: number, name: string}): Promise<string>;
