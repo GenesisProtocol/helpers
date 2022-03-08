@@ -4,10 +4,16 @@ module.exports = {
 		'es2021': true,
 		'node': true,
 	},
-	'extends': 'eslint:recommended',
-	'ignorePatterns': ['index.d.ts'],
+	'plugins': [
+		'@typescript-eslint'
+	],
+	'extends': [
+		'plugin:@typescript-eslint/recommended',
+		'eslint:recommended'
+	],
 	'parserOptions': {
 		'ecmaVersion': 13,
+		'sourceType': 'module'
 	},
 	'rules': {
 		'indent': [

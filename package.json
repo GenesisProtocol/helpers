@@ -3,6 +3,7 @@
  "version": "0.1.2",
  "description": "Helpers for genesis",
  "main": "index.js",
+ "module": "index.js",
  "repository": {
   "type": "git",
   "url": "git+https://github.com/GenesisProtocol/helpers.git"
@@ -13,11 +14,12 @@
   "url": "https://github.com/GenesisProtocol/helpers/issues"
  },
  "homepage": "https://github.com/GenesisProtocol/helpers#readme",
- "dependencies": {
-  "case": "^1.6.3"
- },
  "devDependencies": {
+  "@typescript-eslint/eslint-plugin": "^5.14.0",
+  "@typescript-eslint/parser": "^5.14.0",
+  "case": "^1.6.3",
   "eslint": "^8.5.0",
-  "ethers": "^5.5.4"
+  "ethers": "^5.5.4",
+  "typescript": "^4.6.2"
  }
 }
