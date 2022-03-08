@@ -2,7 +2,7 @@ const fs = require('fs').promises
 const path = require('path')
 const Case = require('case')
 
-const ADDRESSES_FILE_PATH = path.join(__dirname, '../addresses.json')
+const ADDRESSES_FILE_PATH = path.join(__dirname, '../data/addresses.json')
 
 const getAddresses = async () => JSON.parse((await fs.readFile(ADDRESSES_FILE_PATH)).toString())
 
