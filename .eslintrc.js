@@ -5,6 +5,7 @@ module.exports = {
 		'node': true,
 	},
 	'extends': 'eslint:recommended',
+	'ignorePatterns': ['index.d.ts'],
 	'parserOptions': {
 		'ecmaVersion': 13,
 	},
@@ -12,6 +13,7 @@ module.exports = {
 		'indent': [
 			'error',
 			'tab',
+			{ 'SwitchCase': 1 }
 		],
 		'linebreak-style': [
 			'error',

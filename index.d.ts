@@ -1,11 +1,12 @@
-import {ethers} from "ethers";
+interface ChainMap {
+	[chain: string]: number
+}
 
-export function getAddress({ chain, name }: { chain?: number, name: string }): Promise<string>;
+interface AddressMap {
+	[chain: number]: {
+		[name: string]: string
+	}
+}
 
-export function getABI({ name }: { name: string }): Promise<string[]>;
-
-export function getChain(): Promise<number>;
-
-export function getContract({name}: {name: string}): Promise<ethers.Contract>
-
-export function send(tx: any): Promise<any>
+export const chains: ChainMap
+export const addresses: AddressMap
