@@ -1,3 +1,4 @@
+import Case from 'case'
 import addressesData from './data/addresses.json'
 import chainsData from './data/chains.json'
 
@@ -12,5 +13,9 @@ interface AddressMap {
 }
 
 export const chains: ChainMap = chainsData
+
 export const addresses: AddressMap = addressesData
-export const getAbi = (name): Promise<string[]> => import(`${__dirname}/data/abis/${name}`)
+
+export const getAddress = ({ chain, name }: { chain: number, name: string }): string => addresses[chain][Case.constant(name)]
+
+export const getAbi = async ({ name }: { name: string }): Promise<string[]> => (await import(`./data/abis/${ Case.constant(name) }.json`)).default
