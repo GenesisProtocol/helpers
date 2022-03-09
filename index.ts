@@ -13,3 +13,4 @@ interface AddressMap {
 
 export const chains: ChainMap = chainsData
 export const addresses: AddressMap = addressesData
+export const getAbi = (name): Promise<string[]> => import(`${__dirname}/data/abis/${name}`)
