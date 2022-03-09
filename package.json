@@ -1,9 +1,12 @@
 {
  "name": "@genesisprotocol/helpers",
- "version": "0.1.4",
+ "version": "0.1.7",
  "description": "Helpers for genesis",
  "main": "index.js",
  "module": "index.js",
+ "scripts": {
+  "deploy": "npm i && tsc && npm publish --access public"
+ },
  "repository": {
   "type": "git",
   "url": "git+https://github.com/GenesisProtocol/helpers.git"
