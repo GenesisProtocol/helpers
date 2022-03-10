@@ -11,7 +11,7 @@ const getContract = async ({ name }) => new ethers.Contract(
 		name,
 	}),
 	await getABI({ name }),
-	(await ethers.getSigners())[0],
+	await ethers.getSigner(process.env.DEPLOYER_ADDRESS),
 )
 
 const send = async (tx, wait = 2) => {
