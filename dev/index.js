@@ -13,7 +13,7 @@ const save = async ({ name, address, abi }) => {
 		}),
 		abis.saveABI({
 			name,
-			abi ,
+			abi,
 		}),
 	])
 }
