@@ -1,1 +1,1 @@
-["constructor(address)","function getKValue(address) view returns (uint256)","function getTotalValue(address) view returns (uint256)","function markdown(address) view returns (uint256)","function valuation(address,uint256) view returns (uint256)"]
+["constructor(address _OHM)","function getKValue(address _pair) view returns (uint256 k_)","function getTotalValue(address _pair) view returns (uint256 _value)","function markdown(address _pair) view returns (uint256)","function valuation(address _pair, uint256 amount_) view returns (uint256 _value)"]
