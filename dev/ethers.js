@@ -1,7 +1,7 @@
 const { getAddress } = require('./addresses')
 const { getABI } = require('./abis')
 
-const getChain = async () => (await ethers.provider.getNetwork()).chainId
+const getChain = async () => parseInt((await ethers.provider.getNetwork()).chainId)
 
 const getBlock = () => ethers.provider.getBlock('latest')
 
