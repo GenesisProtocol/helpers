@@ -1,6 +1,7 @@
 const fs = require('fs').promises
 const path = require('path')
 const Case = require('case')
+const { setInfo, isChainSpecific } = require('./contract-info')
 
 const ADDRESSES_FILE_PATH = path.join(__dirname, '../data/addresses.json')
 
@@ -11,13 +12,20 @@ const saveAddresses = async addresses => fs.writeFile(
 	JSON.stringify(addresses, null, 4),
 )
 
-const getAddress = async ({ chain = -1, name }) => (await getAddresses())?.[chain]?.[Case.constant(name)]
+const getAddress = async ({ chain, name }) => {
+	if (!await isChainSpecific({ name }))
+		chain = -1
+
+	return (await getAddresses())?.[chain]?.[Case.constant(name)]
+}
 
 const saveAddress = async ({ chain = -1, name, address }) => {
 	const addresses = await getAddresses()
 
 	if (!addresses[chain])
 		addresses[chain] = {}
+
+	await setInfo({ name, chainSpecific: chain !== -1 })
 
 	addresses[chain][Case.constant(name)] = address.toLowerCase()
 

@@ -1,0 +1,71 @@
+{
+    "ZERO": {
+        "chainSpecific": false
+    },
+    "NATIVE": {
+        "chainSpecific": false
+    },
+    "WRAPPED_AVAX": {
+        "chainSpecific": true
+    },
+    "DAI": {
+        "chainSpecific": true
+    },
+    "WRAPPED_BTC": {
+        "chainSpecific": true
+    },
+    "WRAPPED_ETH": {
+        "chainSpecific": true
+    },
+    "GENESIS_FACTORY": {
+        "chainSpecific": false
+    },
+    "GENESIS_ROUTER": {
+        "chainSpecific": false
+    },
+    "INTERFACE_MULTICALL": {
+        "chainSpecific": false
+    },
+    "AUTHORITY": {
+        "chainSpecific": false
+    },
+    "STAKED_GENESIS_TOKEN": {
+        "chainSpecific": false
+    },
+    "GOVERNANCE_GENESIS_TOKEN": {
+        "chainSpecific": false
+    },
+    "GENESIS_TOKEN": {
+        "chainSpecific": false
+    },
+    "BONDING_CALCULATOR": {
+        "chainSpecific": false
+    },
+    "TREASURY": {
+        "chainSpecific": false
+    },
+    "STAKING": {
+        "chainSpecific": false
+    },
+    "BOND_DEPOSITORY": {
+        "chainSpecific": false
+    },
+    "STAKING_DISTRIBUTOR": {
+        "chainSpecific": false
+    },
+    "GENESIS_DAI_PAIR": {
+        "chainSpecific": true
+    },
+    "GENESIS_WRAPPED_AVAX_PAIR": {
+        "chainSpecific": true
+    },
+    "GENESIS_WRAPPED_ETH_PAIR": {
+        "chainSpecific": true
+    },
+    "GENESIS_WRAPPED_BTC_PAIR": {
+        "chainSpecific": true
+    },
+    "WRAPPED_AVAX_DAI_PAIR": {
+        "chainSpecific": true
+    }
+}
