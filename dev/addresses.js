@@ -11,15 +11,12 @@ const saveAddresses = async addresses => fs.writeFile(
 	JSON.stringify(addresses, null, 4),
 )
 
-const getAddress = async ({ chain, name }) => (await getAddresses())?.[chain || 0]?.[Case.constant(name)]
+const getAddress = async ({ name }) => (await getAddresses())?.[Case.constant(name)]
 
-const saveAddress = async ({ chain, name, address }) => {
+const saveAddress = async ({ name, address }) => {
 	const addresses = await getAddresses()
 
-	if (!addresses[chain])
-		addresses[chain] = {}
-
-	addresses[chain][Case.constant(name)] = address.toLowerCase()
+	addresses[Case.constant(name)] = address.toLowerCase()
 
 	await saveAddresses(addresses)
 }

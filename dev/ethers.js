@@ -6,10 +6,7 @@ const getChain = async () => parseInt((await ethers.provider.getNetwork()).chain
 const getBlock = () => ethers.provider.getBlock('latest')
 
 const getContract = async ({ name }) => new ethers.Contract(
-	await getAddress({
-		chain: await getChain(),
-		name,
-	}),
+	await getAddress({ chain: await getChain(), name }),
 	await getABI({ name }),
 	await ethers.getSigner(process.env.DEPLOYER_ADDRESS),
 )
