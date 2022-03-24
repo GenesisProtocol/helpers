@@ -2,9 +2,7 @@ const ethers = require('./ethers')
 const addresses = require('./addresses')
 const abis = require('./abis')
 
-const save = async ({ name, address, abi }) => {
-	const chain = await ethers.getChain()
-
+const save = async ({ chain, name, address, abi }) => {
 	await Promise.all([
 		addresses.saveAddress({
 			chain,
