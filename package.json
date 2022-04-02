@@ -1,6 +1,6 @@
 {
  "name": "@genesisprotocol/helpers",
- "version": "0.1.27",
+ "version": "0.1.28",
  "description": "Helpers for genesis",
  "main": "index.js",
  "module": "index.js",
