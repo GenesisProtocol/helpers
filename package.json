@@ -1,11 +1,11 @@
 {
  "name": "@genesisprotocol/helpers",
- "version": "0.1.19",
+ "version": "0.1.20",
  "description": "Helpers for genesis",
  "main": "index.js",
  "module": "index.js",
  "scripts": {
-  "deploy": "npm i && tsc && npm publish --access public"
+  "deploy": "npm i && tsc && npm version patch --force && npm publish --access public"
  },
  "repository": {
   "type": "git",
