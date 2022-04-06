@@ -16,6 +16,6 @@ export const chains: ChainMap = chainsData
 
 export const addresses: AddressMap = addressesData
 
-export const getAddress = ({ chain, name }: { chain: number, name: string }): string => addresses[chain][Case.constant(name)]
+export const getAddress = ({ chain, name }: { chain?: number, name: string }): string => addresses?.[chain || -1]?.[Case.constant(name)]
 
-export const getAbi = async ({ name }: { name: string }): Promise<string[]> => (await import(`./data/abis/${ Case.constant(name) }.json`)).default
+export const getAbi = async ({ name }: { name: string }): Promise<string[]> => (await import(`./data/abis/${Case.constant(name)}.json`)).default
