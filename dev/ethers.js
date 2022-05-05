@@ -15,9 +15,11 @@ const send = async (tx, wait = 2) => {
 	tx = await tx
 
 	const network = process?.env?.HARDHAT_NETWORK
+	
+	console.log('network: ', network)
 
 	if (network !== 'hardhat' && network !== 'localhost')
-		await tx.wait(wait)
+		await tx.wait(wait) // the problem is here
 
 	return tx
 }
