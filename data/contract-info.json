@@ -67,5 +67,11 @@
     },
     "WRAPPED_AVAX_DAI_PAIR": {
         "chainSpecific": true
+    },
+    "GENESIS_PROXY_ADMIN": {
+        "chainSpecific": false
+    },
+    "TREASURY_IMPLEMENTATION": {
+        "chainSpecific": false
     }
 }
